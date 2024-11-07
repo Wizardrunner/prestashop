@@ -1,0 +1,751 @@
+<h2>Configuración de Parámetros Avanzados</h2>
+<p>Navegar por el menú de parámetros avanzados es como mirar bajo el capó: es donde ocurre todo lo técnico y encontrará parámetros para asegurarse de que su tienda funcione sin problemas. Revisar la información de configuración, configurar los correos electrónicos, hacer copias de seguridad de su base de datos: estas páginas no se visitan con frecuencia (a menos que sea la parte de la base de datos), pero son de cierta importancia, especialmente para su webmaster.</p>
+
+<ul>
+  <li><strong>Información</strong></li>
+  <li><strong>Rendimiento</strong></li>
+  <li><strong>Administración</strong></li>
+  <li><strong>Correo electrónico</strong></li>
+  <li><strong>Importación</strong></li>
+  <li><strong>Equipo</strong></li>
+  <li><strong>Base de datos</strong></li>
+  <li><strong>Registros</strong></li>
+  <li><strong>Webservice</strong></li>
+  <li><strong>Multitienda</strong></li>
+</ul>
+
+<h2>Información</h2>
+<p>Esta página sirve como un recordatorio útil de la configuración de su PrestaShop: versión, información del servidor, versión de PHP, versión de MySQL. Toda esta información es muy útil cuando necesita informar un problema a los desarrolladores de PrestaShop, o simplemente a su webmaster o proveedor de alojamiento web.</p>
+
+<p>Hay una última sección titulada "Lista de archivos modificados". Justo después de haber instalado PrestaShop por primera vez, lo único que esta sección muestra es "No se ha detectado ningún cambio en sus archivos".</p>
+<p>Pero después de instalar algunos módulos, un par de temas, hacer cambios avanzados en algunas clases de anulación o eliminar archivos por completo, esta lista mostrará la diferencia entre su instalación actual de PrestaShop y cómo lucía en su estado original. Esto le ayuda a ver qué cambios se han realizado en su instalación... y por lo tanto, qué debe tener en cuenta si quiere actualizar su tienda manualmente, o si está moviendo archivos a un nuevo servidor.</p>
+
+<p>Incluso con una instalación limpia, esta sección podría indicar archivos faltantes como ".gitattributes", ".gitignore", "CONTRIBUTING.md", "CONTRIBUTORS.md" o "README.md". Estos son archivos específicos de Git, y PrestaShop no los utiliza, por lo que no debe preocuparse por ellos.</p>
+
+<h2>Rendimiento</h2>
+<p>Esta página combina varias herramientas y consejos que podrían ayudarte a mejorar el rendimiento de tu tienda desde el punto de vista del servidor, no de las ventas. Aunque un servidor que funcione bien puede atender a más clientes y, por lo tanto, generar más ventas.</p>
+
+<h3>Smarty</h3>
+<p>Smarty es el nombre del lenguaje de plantillas usado por los temas de PrestaShop. Puedes aprender más sobre él en <a href="http://www.smarty.net/" target="_blank">http://www.smarty.net/</a>.</p>
+
+<p>Hay varias opciones:</p>
+<ul>
+    <li><strong>Caché de plantilla:</strong> Para mejorar el rendimiento en el front-end, PrestaShop almacena en caché tus páginas HTML.</li>
+    <li><strong>No recompilar archivos de plantilla:</strong> El comportamiento normal: las páginas HTML se compilan y se almacenan en caché, luego se muestran tal cual, incluso si el tema ha cambiado.</li>
+    <li><strong>Recompilar plantillas si los archivos se han actualizado:</strong> PrestaShop puede detectar cuando un archivo de tema ha cambiado.</li>
+    <li><strong>Forzar la compilación:</strong> Solo habilítalo si estás editando el tema y necesitas ver tus cambios cada vez que recargues la página.</li>
+    <li><strong>Caché:</strong> Esta opción te permite desactivar todas las cachés de archivos, no solo la relacionada con los archivos de plantilla. Solo desactívala si estás depurando un tema o un módulo de PrestaShop. De lo contrario, déjala habilitada.</li>
+</ul>
+
+<p>El botón "Limpiar caché" en la parte superior de la página te permite eliminar la caché con un solo clic, en lugar de tener que eliminar los archivos en tu servidor FTP.</p>
+
+<h3>Optimización Multi-frontal</h3>
+<p>Cuando tienes varios servidores, esta opción te ayuda a sincronizar la caché entre ellos.</p>
+
+<h3>Tipo de Caché</h3>
+<p>De forma predeterminada, Smarty utiliza un mecanismo de caché basado en archivos. Puedes elegir usar MySQL como recurso de almacenamiento para la caché de salida de Smarty.</p>
+
+<h3>Modo de depuración</h3>
+<p>Cuando está activado el modo de depuración, puedes elegir reducir el impacto de ciertas funciones en PrestaShop para identificar mejor el origen de un error:</p>
+<ul>
+    <li><strong>Desactivar módulos que no son de PrestaShop:</strong> Los módulos propios de PrestaShop se prueban exhaustivamente y no deberían presentar problemas. Si habilitas esta opción, podrás saber si el problema proviene del código propio de PrestaShop (núcleo o módulo), o de un módulo de terceros.</li>
+    <li><strong>Desactivar todas las sobrecargas:</strong> Muchas funciones de PrestaShop pueden ser sobrecargadas. Si habilitas esta opción, todo el código de sobrecarga será deshabilitado y podrás saber si el problema proviene del código propio de PrestaShop o de una sobrecarga de terceros.</li>
+    <li><strong>Modo de depuración:</strong> Al habilitar esta opción, los mensajes de error técnicos serán visibles. Es útil cuando alguien te ayuda y no tiene acceso a tu tienda, pero necesita saber qué está ocurriendo a nivel técnico.</li>
+</ul>
+
+<h3>Características Opcionales</h3>
+<p>Algunas características de PrestaShop pueden ser desactivadas si no las usas, ya que pueden ralentizar tu tienda.</p>
+<p>Si tu catálogo tiene productos que hacen uso de estas características, no podrás desactivarlas. Tendrás que eliminar algunos datos antes de poder desactivarlas.</p>
+
+<p>Puedes desactivar las siguientes características:</p>
+<ul>
+    <li><strong>Combinaciones:</strong> Las combinaciones de productos te permiten tener toda una línea de productos a partir de un solo producto: variando el tamaño, colores, capacidad, etc.</li>
+    <li><strong>Características:</strong> Las características de los productos permiten indicar información específica del producto: peso, material, país de origen, etc.</li>
+    <li><strong>Grupos de clientes:</strong> Los grupos de clientes permiten agrupar a los clientes para otorgarles ciertos privilegios y restricciones: descuentos, restricciones de módulos, etc.</li>
+</ul>
+
+<h3>Combinar, Comprimir y Almacenar en Caché (CCC)</h3>
+<p>CCC es un conjunto de herramientas diseñadas para minimizar la carga en el servidor y el tiempo de carga del tema.</p>
+<p>Hace lo que promete: combina archivos de texto del mismo tipo en un archivo más grande, lo que reduce la cantidad de archivos a descargar; luego comprime el archivo utilizando el algoritmo común Zip, lo que acelera la descarga; finalmente, almacena el archivo comprimido en caché, para que el servidor no tenga que hacer este proceso cada vez que se cargue una página, lo que alivia la carga del procesador del servidor.</p>
+
+<ul>
+    <li><strong>Caché inteligente para CSS:</strong> Los archivos CSS son de texto y se pueden combinar y comprimir de forma segura.</li>
+    <li><strong>Caché inteligente para JavaScript:</strong> Los archivos JavaScript también son de texto, pero su combinación a veces puede ser problemática. Asegúrate de probar todo antes de dejar esta opción activada.</li>
+    <li><strong>Optimización de Apache:</strong> Esta configuración cambiará el archivo de configuración de tu servidor web para hacerlo más eficiente para CCC.</li>
+</ul>
+
+<h3>Servidores de Medios</h3>
+<p>Esta sección te permite redirigir parte de tu tráfico (por ejemplo, imágenes y archivos de video) a otros servidores bajo tu control, a través de otros dominios o subdominios. La mayoría de las veces, los archivos se alojan en una CDN (Red de Entrega de Contenido). Por defecto, PrestaShop admite un servidor de medios.</p>
+<p>Colocar el nombre de dominio de tu tienda en este campo no es la forma correcta de obtener un rendimiento fantástico. Dicho esto, es fácil configurar un servidor de medios, y los beneficios son reales y casi inmediatos. Así es como puedes hacerlo:</p>
+<ul>
+    <li>Abre una cuenta en un nuevo host, preferiblemente uno especializado en contenido distribuido. Los más populares son Akamai, Amazon (con sus servicios AWS, entre los que se encuentra CloudFront) o CloudFlare. También pregunta a tu proveedor de alojamiento, tal vez tenga un servicio de CDN al que puedas suscribirte.</li>
+    <li>Copia tus archivos de medios al servidor de ese host. Esto significa que el servidor CDN debe contener una copia exacta de las siguientes carpetas de tu servidor principal: /img, /themes y /modules.</li>
+    <li>Recuerda: debes asegurarte de que estas carpetas siempre estén sincronizadas: incluso si agregas nuevos productos o cambias tu tema, el servidor CDN debe contener la última versión de todos estos archivos.</li>
+</ul>
+
+<p>Una vez que el servidor CDN esté en su lugar, agrega la dirección web (proporcionada por tu host CDN) en el campo "Servidor de medios #1". Si ese host permite más direcciones web, agrégalas.</p>
+
+<h3>Caché</h3>
+<p>La caché de tu servidor almacena versiones estáticas de tu página web dinámica, para servirlas a tus clientes y reducir así la carga del servidor y el tiempo de compilación.</p>
+<p>La mayoría de las veces, deberías consultar primero con tu proveedor de alojamiento sobre esta configuración, ya que requiere configuraciones especiales en el servidor.</p>
+
+<p>Esta sección te permite elegir habilitar la caché y luego elegir el método de caché:</p>
+<ul>
+    <li><strong>Memcached:</strong> Un sistema de caché distribuido. Muy efectivo, sobre todo con múltiples servidores, pero necesitas asegurarte de que tus servidores/hosts lo soporten.</li>
+    <li><strong>APC:</strong> Alternative PHP Cache es libre, abierto y robusto, pero solo funciona con un servidor. Verifica la disponibilidad de la extensión APC PECL en tu servidor.</li>
+    <li><strong>Xcache:</strong> Xcache es un nuevo sistema de caché, específico para el servidor Lighttpd, por lo que no funcionará con el popular servidor Apache.</li>
+</ul>
+
+<h1>Administración</h1>
+<p>La página de "Administración" contiene opciones generales y configuraciones sobre cómo funciona PrestaShop. Tiene tres secciones.</p>
+
+<h2>General</h2>
+<p>Esta sección es para la configuración más general:</p>
+
+<ul>
+    <li><strong>Comprobar automáticamente si hay actualizaciones de módulos.</strong> Puedes pedirle a PrestaShop que revise regularmente si hay nuevas versiones de tus módulos disponibles en el sitio web de Addons. Si es así, la página "Módulos" mostrará un botón de "Actualizar" para los módulos instalados, junto al botón de "Desinstalar".</li>
+    <li><strong>Comprobar la dirección IP de la cookie.</strong> Esta es una medida de seguridad adicional: puedes indicarle a PrestaShop que verifique que el usuario proviene de la dirección IP almacenada en la cookie de su navegador.</li>
+    <li><strong>Duración de la cookie de la tienda.</strong> Por defecto, la duración de una cookie de PrestaShop es de 480 horas (20 días). Puedes reducirla si consideras que la seguridad lo requiere.</li>
+    <li><strong>Duración de la cookie del panel de administración.</strong> Por defecto, la duración de una cookie de PrestaShop es de 480 horas (20 días). Puedes reducirla si consideras que la seguridad lo requiere.</li>
+</ul>
+
+<h2>Cuota de carga</h2>
+<p>Esta sección te ayuda a definir el tamaño autorizado de los archivos cargados desde tu propio equipo, no desde tus clientes.</p>
+<p>Existen tres opciones, una general y dos más específicas:</p>
+
+<ul>
+    <li><strong>Tamaño máximo para archivos adjuntos.</strong> El valor predeterminado se toma directamente de la configuración de tu servidor, pero puedes reducirlo si es necesario.</li>
+    <li><strong>Tamaño máximo para un producto descargable.</strong> Si vendes productos virtuales (servicios, reservas y productos descargables), esta configuración puede limitar el tamaño de los archivos que tu equipo puede cargar, y por lo tanto, el tamaño del producto final. Planifica con antelación para que nunca dejes a un miembro de tu equipo bloqueado.</li>
+    <li><strong>Tamaño máximo para la imagen de un producto.</strong> De manera similar, puedes limitar el tamaño de las imágenes que tú o tu equipo pueden cargar en tu tienda. Esto puede servir como un recordatorio útil de que los miembros del equipo deben esforzarse por reducir el tamaño de las imágenes, ya que a menudo no es útil cargar nada más grande que 600x600 (que es aproximadamente 200 kB cuando se comprime correctamente). Consulta la página "Imágenes" en el menú "Diseño" para ver los tamaños de imagen que tu tienda está configurada para utilizar. Esto tiene el beneficio adicional de ahorrar tanto espacio en el servidor como ancho de banda, además de potencia de procesamiento (ya que PrestaShop redimensiona las imágenes cargadas para generar miniaturas y más).</li>
+</ul>
+
+<h2>Notificaciones</h2>
+<p>Las notificaciones se muestran en la parte superior de cualquier página de administración cuando la cargas, junto al nombre de la tienda. Muestran la cantidad de nuevos elementos desde la última vez que hiciste clic en ellas.</p>
+
+<p>Al hacer clic en el icono de la campana, se abrirá una pequeña tabla con los distintos tipos de notificaciones.</p>
+
+<p>Puedes elegir no recibir notificaciones para algunos tipos de contenido:</p>
+
+<ul>
+    <li><strong>Mostrar notificaciones de nuevos pedidos.</strong> Muestra los números, las cantidades y los nombres de los clientes para los pedidos que se realizaron recientemente en tu tienda. Desde allí, puedes abrir la página de cualquier pedido individual, o abrir la página "Pedidos" para obtener la lista completa.</li>
+    <li><strong>Mostrar notificaciones de nuevos clientes.</strong> Muestra el nombre de los clientes que se registraron desde la última vez. Desde allí, puedes abrir la página de cualquier cliente individual, o abrir la página "Clientes" para obtener la lista completa.</li>
+    <li><strong>Mostrar notificaciones de nuevos mensajes.</strong> Muestra el correo electrónico de las personas que te enviaron un mensaje a través del formulario de contacto en tu tienda. Desde allí, puedes abrir cualquier mensaje, o abrir la página "Atención al Cliente" para obtener la lista completa.</li>
+</ul>
+
+<h1>Correo electrónico</h1>
+<p>Tu tienda envía muchos mensajes a lo largo de todos los pasos del registro y la realización de un pedido. Aquí puedes configurar cómo se enviarán estos mensajes y ver los mensajes enviados.</p>
+
+<h2>Correo electrónico</h2>
+<p>La primera sección de la página te presenta una lista de todos los correos electrónicos que se enviaron desde tu tienda: el destinatario, la plantilla utilizada, el idioma del mensaje, el asunto del correo electrónico y la hora de envío.</p>
+
+<h2>Correo electrónico</h2>
+<p>Aquí es donde decides cómo se envían y reciben tus correos electrónicos.</p>
+
+<p>El formulario tiene tres conjuntos de opciones:</p>
+
+<ul>
+    <li><strong>Enviar correo a.</strong> Esta es una configuración del front-end. Al final del proceso de pago, un cliente puede dejar un mensaje a tu personal. Puedes elegir a quién se enviará este mensaje seleccionando de la lista desplegable. Para agregar más direcciones, debes ir a Parámetros de la tienda > Contactos.</li>
+    <li><strong>Parámetros del correo electrónico:</strong> cómo se envían técnicamente los correos electrónicos. Elige entre las tres opciones. Consulta más abajo para obtener más información.</li>
+    <li><strong>Formato del correo electrónico:</strong> cómo se envían visualmente los correos electrónicos. Elige entre las tres opciones. Consulta más abajo para obtener más información.</li>
+    <li><strong>Registrar correos electrónicos.</strong> Desactiva esta opción si ya no deseas hacer un seguimiento de los correos electrónicos enviados por tu tienda, como se muestra en la sección de Correo electrónico arriba.</li>
+</ul>
+
+<h2>Configuración técnica</h2>
+<p>Configura PrestaShop para enviar correos electrónicos a tus clientes. Te recomendamos encarecidamente que consultes con tu proveedor de alojamiento web para determinar qué configuraciones usar para esta función. Las opciones son:</p>
+
+<ul>
+    <li><strong>Nunca enviar correos electrónicos.</strong> Mantén esta configuración para fines de prueba. Una vez que tu tienda sea pública, nunca deberías usar esta configuración.</li>
+    <li><strong>Usar la función mail() de PHP.</strong> Esta opción es la recomendada por defecto. En caso de que esto no funcione, usa la opción SMTP que se describe a continuación.</li>
+    <li><strong>Configurar mis propios parámetros SMTP.</strong> En este caso, aparece una nueva sección con más campos. La información para estos campos debe ser proporcionada por tu proveedor de alojamiento web: nombre de dominio de correo, servidor SMTP, usuario SMTP, etc. Asegúrate de transcribir exactamente lo que tu proveedor de alojamiento te proporcione.</li>
+</ul>
+
+<p>La información de configuración SMTP puede ser proporcionada por:</p>
+
+<ul>
+    <li>Tu administrador de sistemas,</li>
+    <li>Tu proveedor de alojamiento,</li>
+    <li>Tu ISP (Proveedor de servicios de Internet),</li>
+    <li>Tu proveedor de correo electrónico.</li>
+</ul>
+
+<p>Tu proveedor de alojamiento web te puede decir si es obligatorio tu nombre de usuario, así como la información de la contraseña y la encriptación a usar.</p>
+
+<p>Por ejemplo, en el caso de Gmail (el servicio de correo ofrecido por Google), podrías tener que ingresar información como la siguiente:</p>
+
+<ul>
+    <li><strong>Servidor SMTP:</strong> smtp.gmail.com</li>
+    <li><strong>Usuario:</strong> my.user.name@gmail.com (ejemplo)</li>
+    <li><strong>Contraseña:</strong> RT22UE87 (ejemplo)</li>
+    <li><strong>Encriptación:</strong> SSL</li>
+    <li><strong>Puerto:</strong> 465</li>
+</ul>
+
+<h2>Configuración visual</h2>
+<p>Hay dos formatos disponibles para los correos electrónicos: HTML es excelente para ver, pero podría no funcionar en todas partes; el texto es aburrido a la vista, pero funciona en todas partes.</p>
+
+<p>Puedes elegir usar solo uno de los dos, o ambos. Se recomienda usar ambos.</p>
+
+<h2>Usar firmas DKIM para los correos electrónicos</h2>
+<p>Las firmas DKIM son firmas digitales invisibles insertadas en el encabezado de un correo electrónico. Esta firma puede ser verificada por el receptor, lo que le permite prevenir el suplantamiento de correo electrónico (un tipo de ataque de phishing). Esto hará que los correos electrónicos de tu tienda tengan menos probabilidades de ser marcados como spam.</p>
+
+<p>La firma DKIM se puede habilitar en Parámetros Avanzados > Correo electrónico.</p>
+
+<p>Al habilitar la firma DKIM, se abrirá un formulario, y aparecerán los campos para el dominio DKIM, selector DKIM y clave privada DKIM. Necesitarás llenar estos campos manualmente para configurar la firma DKIM.</p>
+
+<p>Después de completar los campos, asegúrate de guardar la información utilizando el botón Guardar.</p>
+
+<h2>Prueba tu configuración de correo electrónico</h2>
+<p>Una vez que hayas configurado tus correos electrónicos usando uno de los dos métodos disponibles, ingresa tu propia dirección de correo electrónico en esta sección, luego haz clic en el botón "Enviar un correo de prueba".</p>
+
+<p>Ahora revisa la bandeja de entrada de la dirección proporcionada para verificar que hayas recibido el correo de prueba, en el formato correcto. Si no lo has recibido, actualiza tu configuración con la información correcta.</p>
+
+
+
+
+<h1>Importación</h1>
+<p>La página de importación te permite llenar fácilmente tu catálogo de productos cuando tienes una gran cantidad de productos, o para importar datos que exportaste y convertiste desde otra herramienta de comercio electrónico.</p>
+
+<p>Históricamente, las importaciones se realizaban utilizando archivos .CSV en PrestaShop. Desde la versión 1.7, se soportan otros formatos de archivo, como .xls, .xlsx, .xlst, .ods y .ots.</p>
+
+<p>CSV es un acrónimo de "Comma-separated values" (valores separados por comas). Es un formato de texto plano popular cuando se necesita importar, exportar o simplemente almacenar datos en un formato no propietario. Casi todas las herramientas de manejo de datos soportan el formato CSV, en varias versiones. Puedes leer más sobre el formato CSV en Wikipedia: <a href="http://en.wikipedia.org/wiki/Comma-separated_values" target="_blank">http://en.wikipedia.org/wiki/Comma-separated_values</a>.</p>
+
+<h2>El proceso de importación</h2>
+<p>El proceso de importación requiere preparación y comienza con un formulario que contiene configuraciones principales:</p>
+
+<ul>
+  <li><strong>¿Qué deseas importar?</strong> Elige en la lista desplegable qué tipo de entidad te gustaría importar a tu tienda. Los "Campos disponibles" a la derecha se actualizan cuando eliges una entidad, para que sepas qué tipo de datos debe contener tu archivo de importación.</li>
+  <li>PrestaShop te permite importar los siguientes tipos de datos:
+    <ul>
+      <li>Categorías</li>
+      <li>Productos</li>
+      <li>Combinaciones</li>
+      <li>Clientes</li>
+      <li>Direcciones</li>
+      <li>Marcas</li>
+      <li>Proveedores</li>
+      <li>Alias</li>
+      <li>Órdenes de suministro (si la gestión avanzada de stock está habilitada)</li>
+      <li>Detalles de órdenes de suministro (si la gestión avanzada de stock está habilitada)</li>
+      <li>Contactos de la tienda</li>
+    </ul>
+  </li>
+  <li><strong>Seleccionar un archivo para importar</strong> Puedes importar más de un archivo a la vez, pero asegúrate de que todos contengan el mismo tipo de datos. Puedes cargar archivos desde tu computadora o elegir archivos ya disponibles en tu FTP/ en tu historial.</li>
+  <li>Puedes descargar archivos de ejemplo para cada tipo de datos en la sección "Descargar archivos CSV de ejemplo" a la derecha. Esto te ayudará a comparar estos archivos de ejemplo con tus propios archivos, para que puedas asegurarte de que los archivos que estás a punto de importar estén listos para ser importados a PrestaShop. Estos archivos están almacenados en la carpeta /docs/csv_import de tu instalación de PrestaShop.</li>
+  <li><strong>Idioma del archivo</strong> Los datos solo pueden ser importados para un solo idioma a la vez. Si tus datos existen en más de un idioma, debes dividirlos en tantos archivos como idiomas.</li>
+  <li><strong>Separador de campos</strong> No todos los archivos CSV utilizan comas para separar sus valores: algunos usan tabulaciones, otros punto y coma, etc. Puedes indicar qué usa tu archivo en este campo.</li>
+  <li><strong>Separador de valores múltiples</strong> Cuando un atributo puede soportar más de un valor, estos valores deben estar separados por un separador específico. Después de revisar tus archivos, indica tu separador aquí.</li>
+  <li><strong>Eliminar todo ___ antes de importar</strong> Esta opción borrará todas las entradas existentes previamente del tipo de datos que estás importando. Así comenzarás con una pizarra limpia.</li>
+  <li><strong>Usar la referencia del producto como clave</strong> Solo para importación de productos. Puedes elegir que la clave del producto sea determinada por PrestaShop, o en su lugar usar la referencia del producto como ID. En este caso, asegúrate de que el archivo contenga referencias para todos tus productos importados.</li>
+  <li><strong>Saltar regeneración de miniaturas</strong> Solo para importación de categorías y productos. Puedes elegir que PrestaShop regenere las miniaturas que están vinculadas desde tu archivo CSV (en los campos "URL de imagen" o "URLs de imagen").</li>
+  <li><strong>Forzar todos los números de ID</strong> Puedes elegir mantener los IDs importados o permitir que el importador los autoincremente.</li>
+  <li><strong>Enviar correo electrónico de notificación</strong> Si estás importando archivos grandes, activa esta opción para recibir un correo electrónico cuando la importación esté completa.</li>
+</ul>
+
+<p>Cuando cambies la entidad que deseas importar, la sección a la derecha, titulada "Campos disponibles", cambiará para presentar los campos de datos esperados. Aunque la herramienta de importación te ayuda al hacer coincidir los campos de tu archivo con los de PrestaShop, deberías tratar de hacer que tus datos sean más amigables para la importación siguiendo el esquema de nombres y el orden de los campos presentados. De no ser así, la importación será más tediosa, pero no imposible.</p>
+<p>Algunos campos tienen un pequeño popup de información disponible (representado por un logo de "i"), el cual puedes mostrar pasando el cursor sobre él. Estos suelen referirse a las características de multitienda o de gestión avanzada de stock de PrestaShop. Asegúrate de leerlos todos para poder construir/editar mejor tus archivos de datos.</p>
+
+<h2>Formato de los datos</h2>
+<p>El archivo de datos importado debe ser un archivo de texto, utilizando un formato basado en CSV y la extensión de archivo .csv. Recomendamos usar un punto y coma ";" como separador de campos. Si tus datos textuales (descripción del producto, etc.) contienen puntos y coma, debes eliminarlos o elegir otro separador en la opción "Separador de campos".</p>
+
+<p>Puedes crear un archivo CSV usando cualquier editor de texto (recomendamos Notepad++: <a href="http://notepad-plus-plus.org/" target="_blank">http://notepad-plus-plus.org/</a>), pero te aconsejamos usar un programa de hojas de cálculo y luego guardar tu trabajo en formato CSV. Usar un programa de hojas de cálculo te permite tener un control más visual y fácil de tus datos, en comparación con un archivo de texto plano. Puedes usar Microsoft Excel (comercial: <a href="http://office.microsoft.com/en-us/excel/" target="_blank">http://office.microsoft.com/en-us/excel/</a>) o el gratuito OpenOffice.org Calc (<a href="http://www.openoffice.org/" target="_blank">http://www.openoffice.org/</a>).</p>
+
+<h3>Ejemplo de archivo de importación</h3>
+<p>Este es un ejemplo de archivo de importación con una lista de productos:</p>
+<pre>
+"Enabled";"Name";"Categories";"Price";"Tax rule ID";"Buying price";"On sale";"Reference";"Weight";"Quantity";"Short desc.";"Long desc";"Images URL"
+1;"Test";"1,2,3";130;1;75;0;"PROD-TEST";"0.500";10;"'Tis a short desc.";"This is a long description.";"http://www.myprestashop/images/product1.gif"
+0;"Test 02";"1,5";110;1;65;0;"PROD-TEST2";"0.500";10;"'Tis also a short desc.";"This is a long description too.";"http://www.myprestashop/images/product2.gif"
+1;"Test 03";"4,5";150;1;85;0;"PROD-TEST3";"0.500";10;"'Tis a short desc. again";"This is also a long description.";"http://www.myprestashop/images/product3.gif"
+</pre>
+<p>Nota que este es solo un archivo de ejemplo regular construido para esta demostración; no está optimizado para la importación en PrestaShop. Si necesitas un archivo de ejemplo para aprender, usa los que puedes descargar de la sección "Descargar archivos CSV de ejemplo".</p>
+<p>La primera fila debe contener el nombre descriptivo para la columna de datos (podrás omitirla durante el proceso de importación). Debe haber el mismo número de columnas en cada fila.</p>
+
+<p>Recuerda que:</p>
+<ul>
+    <li>La columna de precio utilizará la moneda predeterminada de tu tienda.</li>
+    <li>Las categorías deben ser especificadas utilizando sus IDs existentes (por lo que debes haberlas importado primero), y separadas por comas (por defecto).</li>
+    <li>La URL de la imagen debe ser un enlace absoluto. En otras palabras, debe ser el enlace que se puede usar en un navegador web para mostrar la imagen. Por ejemplo: http://www.miprestashop.com/imagenes/productoXXX.gif.</li>
+    <li>La codificación de caracteres del archivo debe ser UTF-8. Si no es así, usa ISO-8859-1.</li>
+    <li>Las fechas deben utilizar el formato ISO 8601, sin un designador de zona horaria (la zona horaria será la de tu tienda): 2013-06-21 15:07:27.</li>
+  </ul>
+  
+  <h2>Subida del archivo</h2>
+  <p>Una vez que tengas todos tus datos en formato CSV, puedes cargarlos a la base de datos de tu tienda utilizando el formulario de esta página.</p>
+  
+  <p>Tienes dos formas de registrar los archivos para importar:</p>
+  <ul>
+    <li>Usando tu navegador: haz clic en el botón "Subir", selecciona tu archivo y valida. Haz esto tantas veces como sea necesario para listar todos los archivos de importación.</li>
+    <li>Usando tu cliente FTP: sube los archivos a la carpeta /admin-dev/import de tu instalación de PrestaShop. Recarga la página de importación: el botón "Elegir desde el historial / FTP" ahora debería mostrar un número. Haz clic en el botón para ver la lista de archivos disponibles (incluyendo los que subiste previamente con el navegador), luego haz clic en el botón "Usar" para el archivo que deseas importar.</li>
+  </ul>
+  
+  <p>Una vez que todos tus archivos estén listados en la sección "Selecciona un archivo para importar", puedes continuar con el resto del formulario:</p>
+  <ul>
+    <li>Confirma el tipo de datos contenidos en tu archivo, usando el menú desplegable denominado "¿Qué deseas importar?". Una vez que hayas seleccionado el tipo de datos, aparecerá la lista de campos disponibles a la derecha, lo que te ayudará a refinar tu archivo CSV, al menos para el orden de las columnas, que pronto será útil.</li>
+    <li>Selecciona el idioma del contenido importado. Si el idioma de destino no está disponible, primero debes instalarlo, en la página de "Traducciones" dentro del menú "Internacional".</li>
+    <li>Selecciona los separadores. Sugerimos que dejes los valores predeterminados ("separador de campos" con punto y coma ";", "separadores de valores múltiples" con coma ","). Pero, si tu archivo CSV tiene una estructura diferente, debes cambiar estos valores en consecuencia.</li>
+    <li>Si deseas eliminar todos los productos de tu catálogo antes de la importación, selecciona la opción correspondiente.</li>
+  </ul>
+  
+  <p>Una vez que hayas tomado todas tus decisiones, haz clic en "Siguiente paso".</p>
+  
+  <p>Todos los archivos de importación se suben directamente en la subcarpeta /import de la carpeta admin. Si el menú desplegable de archivos se llena demasiado, puedes eliminar las importaciones antiguas directamente usando tu cliente FTP.</p>
+  
+  <h2>Herramienta de mapeo de datos</h2>
+  <p>Cuando hagas clic en el botón "Siguiente paso", la página se recargará con la herramienta de mapeo de datos. Esta interfaz te ayudará a mapear las columnas de datos de tu archivo con las que requiere PrestaShop.</p>
+  
+  <p>En esta tabla se presentan las filas de tu archivo, colocadas bajo columnas arbitrarias que coinciden con las necesidades de la base de datos de PrestaShop. Depende de ti asegurarte de que todas las columnas de tu archivo CSV estén mapeadas con el encabezado correcto, utilizando el selector desplegable de cada encabezado, para importar el contenido correctamente.</p>
+  
+  <p>Por ejemplo, con nuestro archivo de muestra:</p>
+  <ul>
+    <li>Primera columna. La marcamos como "Habilitado", PrestaShop presenta "ID" como encabezado. Haz clic en el menú desplegable del encabezado y selecciona "Activo (0/1)".</li>
+    <li>Segunda columna. Marcada como "Nombre", el encabezado indica "Activo (0/1)". Cambiaremos el encabezado por "Nombre *".</li>
+    <li>Ya te haces la idea...</li>
+  </ul>
+  
+  <p>La pantalla no puede mostrar más de 6 columnas, así que haz clic en los botones ">" y "<" para ver las otras columnas, y asegúrate de que todas estén correctamente mapeadas.</p>
+  
+  <p>En nuestro ejemplo, usamos la primera fila para los nombres de las columnas. Como no deseamos que se importen, ingresa "1" en el campo de texto "Filas a omitir".</p>
+  
+  <p>Una vez que hayas terminado de mapear tus columnas, haz clic en el botón "Importar" (en la esquina inferior derecha de la pantalla), y PrestaShop comenzará el proceso de importación. Se abrirá una ventana emergente para mostrarte el progreso de la importación.</p>
+  
+  <p>Cuando el proceso termine, debería indicar "100% validado" y "100% importado". Al cerrar esta ventana emergente, serás dirigido a la pantalla principal. Si ocurrió algún error durante la importación, verás un aviso con todos los problemas encontrados. En este caso, debes revisar tu archivo y corregir todo lo necesario.</p>
+  
+  <h2>Configuraciones de Mapeo</h2>
+  <p>El proceso de mapeo puede ser tedioso si no puedes personalizar el orden de las columnas de tu archivo según el utilizado por el importador de PrestaShop, y más aún si necesitas hacerlo repetidamente. Es por eso que PrestaShop incluye una herramienta para guardar la configuración actual de mapeo que has configurado usando los selectores desplegables de los encabezados.</p>
+  
+  <p>La herramienta es un campo simple en la parte superior de la herramienta de mapeo. Puedes realizar las tres acciones básicas (solo una si no se ha guardado ninguna configuración de mapeo aún):</p>
+  <ul>
+    <li><strong>Guardar:</strong> Ingresa un nombre descriptivo en el campo y haz clic en "Guardar". La interfaz se actualizará para mostrar la configuración guardada en su lista desplegable.</li>
+    <li><strong>Cargar:</strong> Selecciona una configuración de mapeo en la lista desplegable y haz clic en "Cargar".</li>
+    <li><strong>Eliminar:</strong> Selecciona una configuración de mapeo en la lista desplegable y haz clic en "Eliminar".</li>
+  </ul>
+  
+  <h2>Importación de Características usando Excel</h2>
+  <p>La importación desde Excel es especial, ya que no puedes establecer los delimitadores de campos o de valores múltiples. Debido a esto, debes prestar especial atención a los campos “irregulares” (es decir, aquellos que no son campos de texto sencillos y que tienen varias variables). El campo de Características en la importación de Productos es uno de estos campos irregulares.</p>
+  
+  <p>El formato para la columna de Características está dividido en 4 “partes”, cada una separada por dos puntos: nombrecaracterística:valor:posición:valorpersonalizado.</p>
+  
+  <p>Para agregar múltiples características, separa los "conjuntos" de características por comas, por ejemplo: nombrecaracterística1:valor1:posición1:valorpersonalizado1,nombrecaracterística2:valor2:posición2:valorpersonalizado2,etc.</p>
+  
+  <p>Se permiten espacios en cada “parte”, pero no puedes usar dos puntos (:) o comas (,) como delimitadores de partes y valores respectivamente, ya que siempre se interpretarán como tal. Puedes tener partes vacías, por ejemplo, si deseas dejar vacía la parte “valor”. Simplemente usa dos puntos para omitir la parte. Ejemplo: Fecha de origen::1:1</p>
+  
+  <p>La descripción de cada parte es la siguiente:</p>
+  <ul>
+    <li><strong>nombrecaracterística:</strong> El nombre de la característica. Si es un valor seleccionable (no personalizado), debe ser exactamente como aparece en Catálogo > Características. Ejemplo: Ingredientes.</li>
+    <li><strong>valor:</strong> El valor de la característica. Si es un valor no personalizado, debe ser uno de los valores existentes en Catálogo > Características, de lo contrario, PrestaShop lo añadirá a la lista de valores.</li>
+    <li><strong>posición:</strong> La posición en la que se mostrará la característica relativa a las otras, comenzando desde 1.</li>
+    <li><strong>valorpersonalizado:</strong> 1 (para sí) o 0 (para no). Un valor personalizado es aquel que no se puede seleccionar de una lista de valores predefinidos en Catálogo > Características. Usa 0 si has definido una lista de valores seleccionables en el backend.</li>
+  </ul>
+  
+  <p>Si estableces <strong>valorpersonalizado</strong> en 0 e ingresas un <strong>nombrecaracterística</strong> o un valor que NO exista, la característica y/o el valor serán añadidos por ti.</p>
+
+  <p>Si estás importando un archivo que NO es tu idioma predeterminado (es decir, un archivo de traducción), no incluyas características predefinidas (es decir, <strong>valorpersonalizado</strong> es 0), ya que esto creará una característica duplicada. Las traducciones para las características predefinidas deben realizarse una sola vez en el backend a través de Catálogo > Características. Para idiomas no predeterminados, agrega solo características con valor personalizado.</p>
+  
+  <p>También escrito con la valiosa contribución de Fadi H. Rezq.</p>
+
+<h2>Equipo</h2>
+<p>Ya sea que estés construyendo tu tienda por ti mismo o tengas un negocio establecido con empleados, en algún momento necesitarás dar acceso a tu tienda a otras personas. Para gestionar tus pedidos diarios, obtener ayuda técnica, trabajar con traductores profesionales, etc.</p>
+
+<p>Cada vez que necesites dar acceso a tu tienda a alguien, debes crear una cuenta para esa persona (¡nunca des tus propias credenciales!) y configurar cuidadosamente los permisos. Las páginas del equipo te ayudarán con esto.</p>
+
+<p>Este capítulo contiene las siguientes secciones:</p>
+<ul>
+  <li>Empleados</li>
+  <li>Perfiles</li>
+  <li>Permisos</li>
+</ul>
+
+
+
+
+<h2>Empleados</h2>
+<p>La página de administración "Empleados" lista todas las cuentas de usuario que tienen acceso al back office de tu tienda. Por defecto, encontrarás la cuenta que se creó durante la instalación de la tienda, que se configura automáticamente como SuperAdmin. El SuperAdmin tiene acceso a todas las funciones de PrestaShop sin restricción.</p>
+
+<p>Debes asegurarte de crear una nueva cuenta de empleado para cada empleado real que tenga algo que ver con tu negocio en línea. Esto significa que nunca debes tener una cuenta de uso general que todos puedan usar, porque necesitas llevar un registro de quién hizo qué en tu tienda. De hecho, los empleados pueden editar pedidos, aceptar pagos y reembolsar a los clientes, y necesitas saber quién hizo qué. Tener una cuenta personal de administración para cada empleado es una buena manera de asegurarte de que tu equipo maneje tu tienda de manera responsable.</p>
+
+<h3>Agregar un nuevo empleado</h3>
+<p>El botón "Agregar nuevo empleado" te lleva al formulario de creación de empleado.</p>
+
+<p>Este formulario tiene los siguientes ajustes:</p>
+
+<ul>
+  <li><strong>Nombre y Apellido</strong>. El nombre no aparece a los clientes, pero es muy útil cuando necesitas saber quién hizo qué en tu tienda.</li>
+  <li><strong>Dirección de correo electrónico</strong>. Si se permite, el empleado recibirá los correos electrónicos de los clientes y las notificaciones de PrestaShop en esta dirección. También se utiliza como identificador de inicio de sesión de la cuenta.</li>
+  <li><strong>Contraseña</strong>. Trata de no hacerla obvia. No deseas que la cuenta de un empleado sea utilizada por personas desconocidas.</li>
+  <li><strong>Suscribirse al boletín de PrestaShop</strong>. Suscríbete al boletín de PrestaShop para recibir consejos de comercio electrónico y noticias del equipo de PrestaShop.</li>
+  <li><strong>Página predeterminada</strong>. Puedes decidir qué página verá el usuario justo después de iniciar sesión. Esto podría ser la página de Estadísticas para los SuperAdmins, o la página de Pedidos para los vendedores.</li>
+  <li><strong>Idioma</strong>. El idioma predeterminado, ya que tu negocio puede estar hecho en inglés, pero tus logísticos pueden ser de otro país. Asegúrate de agregar los idiomas necesarios, utilizando la página "Traducciones" en el menú "Internacional".</li>
+  <li><strong>Activo</strong>. Puedes desactivar temporal y definitivamente una cuenta. Esto te permite crear cuentas temporales, por ejemplo, cuando necesitas ayuda durante las vacaciones o la temporada de compras.</li>
+  <li><strong>Perfil de permisos</strong>. Es muy importante que asignes un perfil correcto a cada cuenta de empleado. Un perfil está vinculado a un conjunto de permisos y derechos de acceso, y debes familiarizarte con los perfiles existentes, listados en la página "Perfiles". El perfil determina qué parte del back office de tu tienda puede acceder el empleado; por ejemplo, cuando el empleado inicia sesión, solo se mostrarán las páginas/menús que se han configurado como accesibles para su perfil. Esta es una configuración muy importante.</li>
+  <li><strong>Avatar del perfil</strong> (la imagen que te representa en el back office). Está vinculado a la cuenta del usuario en el foro de PrestaShop. Por lo tanto, si deseas personalizar esta imagen, primero debes crear una cuenta en el foro: <a href="http://www.prestashop.com/forums/" target="_blank">http://www.prestashop.com/forums/</a></li>
+</ul>
+
+<h3>Opciones de empleados</h3>
+<p>La sección en la parte inferior de la página "Empleados", justo debajo de la lista de empleados, tiene dos opciones disponibles:</p>
+
+<ul>
+  <li><strong>Regeneración de contraseña</strong>. Te permite establecer la frecuencia con la que un empleado puede cambiar su contraseña.</li>
+  <li><strong>Memorizar el idioma usado en los formularios del panel de administración</strong>. Si está en "Sí", permite a los empleados guardar su propio idioma predeterminado para los formularios.</li>
+</ul>
+
+<h2>Perfiles</h2>
+<p>PrestaShop te permite asignar deberes y derechos específicos a cada empleado que te ayuda a gestionar la tienda en línea. Por ejemplo, el administrador tendrá acceso a toda la tienda, sin restricciones, mientras que un empleado solo podrá acceder al catálogo o a los pedidos.</p>
+
+<p>Por defecto, PrestaShop tiene 4 perfiles listos para usar:</p>
+
+<ul>
+  <li><strong>SuperAdmin</strong>. El rango más alto. Tiene todos los derechos y puede acceder a todo en la instalación de PrestaShop.</li>
+  <li><strong>Logístico</strong>. Aquellos encargados de empaquetar y enviar los pedidos. Solo pueden acceder a las páginas de pedidos, envíos y gestión de stock, y parte del catálogo y las páginas de clientes.</li>
+  <li><strong>Traductor</strong>. Aquellos encargados de traducir el contenido textual de tu tienda. Pueden acceder a productos y categorías, páginas de contenido y la página de "Traducciones".</li>
+  <li><strong>Vendedor</strong>. Tus vendedores, si los tienes. Además de los derechos de acceso del traductor, también pueden acceder a las páginas de clientes, los módulos y el webservice, y algunas estadísticas.</li>
+</ul>
+
+<p>Puedes ver los detalles de los derechos de acceso revisando cada perfil en la página "Permisos".</p>
+
+<p>El perfil de SuperAdmin no puede ser eliminado, solo renombrado.</p>
+
+<p>Debe haber al menos un empleado con un perfil de SuperAdmin.</p>
+
+<h3>Agregar un nuevo perfil</h3>
+<p>Puedes agregar tantos perfiles como sea necesario.</p>
+
+<p>Agregar un nuevo perfil es bastante sencillo: simplemente haz clic en el botón "Agregar nuevo perfil", ingresa un nombre único para el nuevo perfil y guarda.</p>
+
+<p>La parte más compleja viene cuando configuras los derechos de acceso del nuevo perfil. Esto se hace en la página "Permisos".</p>
+
+
+<h2>Permisos</h2>
+<p>Los permisos son la parte central de los perfiles de PrestaShop. Te permiten ver con mucha precisión lo que una cuenta de empleado puede y no puede hacer en tu tienda.</p>
+
+<p>La página de administración de "Permisos" está construida mediante pestañas:</p>
+
+<ul>
+  <li>En la izquierda de la pantalla, hay tantas pestañas como perfiles disponibles.</li>
+  <li>En el resto de la pantalla, PrestaShop muestra los permisos del perfil seleccionado. Esta pestaña contiene dos tablas lado a lado.</li>
+</ul>
+
+<p>Cuando haces clic en cualquier perfil (excepto SuperAdmin), las dos tablas aparecen para darte acceso a sus criterios:</p>
+
+<ul>
+  <li><strong>En la izquierda</strong>, permisos relacionados con el menú: puedes decidir lo que el perfil puede hacer con los menús. De hecho, podrías evitar que un perfil edite el contenido de una página o incluso ocultar el menú completamente.</li>
+  <li><strong>En la derecha</strong>, permisos relacionados con los módulos: mientras que puedes permitir que algunos perfiles vean los módulos disponibles, podrías preferir que solo los empleados más confiables puedan configurar algunos módulos clave.</li>
+</ul>
+
+<p>Para cada uno de los criterios del menú, tienes 5 opciones:</p>
+
+<ul>
+  <li><strong>Ver</strong>. El empleado puede ver la información.</li>
+  <li><strong>Agregar</strong>. El empleado puede agregar nueva información.</li>
+  <li><strong>Editar</strong>. El empleado puede modificar la información.</li>
+  <li><strong>Eliminar</strong>. El empleado puede eliminar la información.</li>
+  <li><strong>Todo</strong>. Habilita todas las opciones anteriores para la fila actual.</li>
+</ul>
+
+<p>Mientras tanto, los criterios de los módulos tienen 3 opciones:</p>
+
+<ul>
+  <li><strong>Ver</strong>. El empleado puede ver la configuración del módulo.</li>
+  <li><strong>Configurar</strong>. El empleado puede configurar el módulo.</li>
+  <li><strong>Desinstalar</strong>. El empleado puede desinstalar el módulo.</li>
+</ul>
+
+<p>Los permisos de SuperAdmin no pueden ser modificados: el perfil simplemente tiene todos los derechos para cada criterio.</p>
+
+<h3>Configurar permisos para un nuevo perfil</h3>
+<p>Para este ejemplo, vamos a crear un nuevo perfil, "Preparador de pedidos". Primero crea el perfil en la página "Perfiles", completando el campo "Nombre". Tan pronto como se guarde, aparecerá en la lista de perfiles.</p>
+
+<p>Luego, necesitas asignar permisos a este nuevo perfil. Ve a la página "Permisos" y haz clic en la pestaña del nuevo perfil: aparecerá la lista de criterios. Por defecto, un nuevo perfil no tiene acceso a ninguna de las páginas del back office.</p>
+
+<p>Hay dos formas de llenar los criterios, dependiendo de los límites o la libertad que quieras que tenga el perfil:</p>
+
+<ul>
+  <li>Haz clic en las casillas de permisos una por una hasta que tenga suficientes derechos de acceso para realizar el trabajo.</li>
+  <li>Marca todas las casillas, luego elimina los permisos uno por uno hasta que solo tenga los necesarios.</li>
+</ul>
+
+<p>Tienes dos formas de marcar casillas en bloque:</p>
+
+<ul>
+  <li><strong>Por columna</strong>: en la parte superior de cada columna, una casilla de verificación permite marcar todas las casillas de esa columna de una vez. Desmarcarla desmarcará todas las casillas actualmente marcadas.</li>
+  <li><strong>Por fila</strong>: si haces clic en la casilla "Todo" para una fila dada, todas las casillas de esa fila se marcarán. Desmarcarla desmarcará todas las casillas actualmente marcadas.</li>
+</ul>
+
+<p>Luego puedes desmarcar filas seleccionadas en lugar de marcar una por una las filas necesarias.</p>
+
+<p>Para evitar errores durante la configuración de tus permisos, PrestaShop guarda automáticamente tus configuraciones cada vez que realizas un cambio. Esto significa que no tienes que hacer clic en ningún botón de "Guardar". Una vez que hayas asignado los derechos al perfil, puedes volver a la página de administración de "Empleados" y comenzar a asignar ese nuevo perfil a los empleados que lo necesiten.</p>
+
+<h2>Base de Datos</h2>
+<p>El menú de la base de datos reúne la página del Gestor SQL y la de Respaldo de Base de Datos: todo lo que necesitas para manejar tu base de datos, principalmente para usuarios avanzados.</p>
+
+<p>Este capítulo contiene las siguientes secciones:</p>
+
+<ul>
+  <li>Gestor SQL</li>
+  <li>Respaldo de Base de Datos</li>
+</ul>
+
+<h2>Gestor SQL</h2>
+<p>El gestor SQL es una herramienta compleja, que debería ser reservada para personas técnicas que sepan cómo explorar una base de datos utilizando el lenguaje SQL. A cambio de esta complejidad, puede ser extremadamente poderosa y resulta inmensamente útil para aquellos que la dominan.</p>
+
+<p>Esta herramienta te permite realizar consultas SQL directamente sobre la base de datos de PrestaShop y guardarlas para su uso posterior. De hecho, PrestaShop presenta los datos de su base de datos de muchas maneras, pero podrías necesitar algo más, o más simplemente, algo más crudo que la interfaz limpia de PrestaShop. Usando el gestor SQL, puedes realizar consultas complejas que construyen tablas de datos de la forma en que TÚ las necesitas.</p>
+
+<p>Por ejemplo, usando esta herramienta y tus conocimientos de SQL, podrías crear una consulta reutilizable que te dé una lista actualizada de los clientes suscritos a tu boletín, o obtener una lista de productos en formato HTML o CSV.</p>
+
+<p>Por razones de seguridad, algunos tipos de consultas no están permitidos: UPDATE, DELETE, CREATE TABLE, DROP, etc. En resumen, solo puedes leer datos (consulta SELECT).</p>
+
+<p>Además, las claves seguras o contraseñas están ocultas (***********).</p>
+
+<h3>Crear una nueva consulta</h3>
+<p>Como es habitual, el botón "Añadir nueva consulta SQL" lleva al formulario de creación. Tiene dos campos principales:</p>
+
+<ul>
+  <li><strong>Nombre de la consulta SQL:</strong> Haz que el nombre sea tan largo y descriptivo como sea necesario.</li>
+  <li><strong>Consulta SQL:</strong> La consulta SQL en sí. Puedes realizar JOINs u otras selecciones complejas.</li>
+</ul>
+
+<p>Adicionalmente, la sección "Lista de tablas MySQL" te ayuda a explorar la base de datos y facilita la creación de tus consultas. Te ofrece un selector práctico y clicable de todas las tablas disponibles en la base de datos. Selecciona una tabla para que PrestaShop muestre sus atributos y tipos, luego haz clic en "Añadir atributo a la consulta SQL" para enviar su nombre al campo "Consulta".</p>
+
+<p>Guardar el formulario te devuelve a la página principal, con la lista de consultas.</p>
+
+<h3>Ejecutar una consulta</h3>
+<p>Cada consulta guardada en la tabla tiene cuatro íconos a la derecha de su fila:</p>
+
+<ul>
+  <li><strong>Exportar:</strong> Ejecuta la consulta y la descarga en formato CSV.</li>
+  <li><strong>Ver:</strong> Ejecuta la consulta y muestra los resultados en una tabla HTML, dentro de la interfaz de PrestaShop.</li>
+  <li><strong>Editar:</strong> Puedes editar una consulta tantas veces como sea necesario para refinarla y obtener mejores resultados.</li>
+  <li><strong>Eliminar:</strong> Una vez que una consulta ya no se use (o simplemente porque no funciona), puedes eliminarla haciendo clic en este botón y confirmando tu elección.</li>
+</ul>
+
+<h3>Ajustes</h3>
+<p>Solo hay una configuración en este momento:</p>
+<ul>
+  <li><strong>Selecciona la codificación de archivo predeterminada:</strong> Puedes configurar la codificación de caracteres del archivo CSV descargado. Se recomienda el valor predeterminado, UTF-8, pero puedes seleccionar ISO-8859-1 si es necesario.</li>
+</ul>
+
+<h3>Algunos ejemplos de consultas</h3>
+<p>Las posibilidades son infinitas, pero aquí tienes algunos ejemplos de consultas para ayudarte a construir las tuyas:</p>
+
+<ul>
+  <li><strong>Listado de todas las direcciones de correo electrónico de todos los clientes:</strong><br>
+    <code>SELECT email FROM ps_customer</code>
+  </li>
+  <li><strong>Listado de todas las direcciones de correo electrónico de los clientes suscritos a tu boletín:</strong><br>
+    <code>SELECT email FROM ps_customer WHERE newsletter = 1</code>
+  </li>
+  <li><strong>Listado de todos los productos activos que tienen una descripción en francés (id_lang = 4):</strong><br>
+    <code>SELECT p.id_product, pl.name, pl.link_rewrite, pl.description FROM ps_product p LEFT JOIN ps_product_lang pl ON (p.id_product = pl.id_product) WHERE p.active = 1 AND pl.id_lang = 4</code>
+  </li>
+  <li><strong>Listado de todos los pedidos, con detalles sobre el transportista, moneda, pago, total y fecha:</strong><br>
+    <code>SELECT o.id_order AS id, CONCAT(LEFT(c.firstname, 1), '. ', c.lastname) AS Customer, ca.name AS Carrier, cu.name AS Currency, o.payment, CONCAT(o.total_paid_real, ' ', cu.sign) AS Total, o.date_add AS Date FROM ps_orders o LEFT JOIN ps_customer c ON (o.id_customer = c.id_customer) LEFT JOIN ps_carrier ca ON (o.id_carrier = ca.id_carrier) LEFT JOIN ps_currency cu ON (o.id_currency = cu.id_currency)</code>
+  </li>
+</ul>
+
+<h2>Respaldo de Base de Datos</h2>
+<p>Un respaldo es la acción de guardar el contenido de tu base de datos en archivos que guardas en un lugar seguro. El objetivo es que puedas recurrir a ellos en caso de que tu base de datos falle.</p>
+
+<p>Debes realizar respaldos regulares de tu tienda, para que, en caso de una caída, puedas reiniciar tu tienda rápidamente y en las mejores condiciones. La base de datos contiene la mayoría de la información de tu tienda, gran parte de la cual es indispensable para que PrestaShop funcione correctamente, como tus productos, categorías y otros datos que añadiste desde la instalación, pero no incluye tus imágenes, por ejemplo (estas se almacenan, junto con los archivos de tu tema, en tu servidor).</p>
+
+<p>Cuanto más a menudo realices un respaldo, más seguro estarás. Una vez a la semana es la frecuencia mínima recomendada.</p>
+
+<p>Para crear respaldos de la base de datos de tu tienda, tienes varias soluciones. Puedes usar herramientas como phpMyAdmin (reservada para usuarios avanzados), o usar la integrada en PrestaShop: la página "Respaldo de BD".</p>
+
+<p>La página comienza con dos avisos grandes. Debes leer ambos completamente para tener una mejor idea de lo que hace la página:</p>
+
+<ul>
+  <li><strong>Sección "Descargo de responsabilidad":</strong> Te da una serie de recordatorios sobre los respaldos, los cuales deberías leer cada vez que realices un respaldo. La sección termina con el botón "He leído el descargo de responsabilidad. Crear un nuevo respaldo", que debes hacer clic para crear un respaldo. Una vez creado, el respaldo aparecerá en una nueva "Sección de descarga" en la parte superior de la página (haz clic en el botón para descargar el archivo de respaldo a tu computadora), y en la lista debajo de los avisos.</li>
+  <li><strong>Sección "Cómo restaurar":</strong> Te da consejos sobre cómo restaurar tus datos en PrestaShop en caso de un fallo. Deberías memorizar esta información o, al menos, guardarla en algún lugar en caso de que un fallo de la base de datos haga imposible acceder a la administración de PrestaShop – y, por tanto, a la página de respaldo de la BD. Justo en caso, la encontrarás también abajo.</li>
+</ul>
+
+<h3>Cómo restaurar un respaldo de base de datos en 10 sencillos pasos</h3>
+<ol>
+  <li>Configura "Habilitar tienda" en "No" en la página de "Mantenimiento" bajo el menú "Preferencias".</li>
+  <li>Descarga el respaldo de la lista de abajo o desde tu servidor FTP (en la carpeta "admin/backups").</li>
+  <li>Verifica la integridad del respaldo: busca errores, archivos incompletos, etc... Asegúrate de verificar todos tus datos.</li>
+  <li>Solicita a tu proveedor de hosting acceso a "phpMyAdmin" para tu base de datos.</li>
+  <li>Conéctate a "phpMyAdmin" y selecciona tu base de datos actual.</li>
+  <li>Salvo que hayas habilitado la opción "Eliminar tablas existentes", debes eliminar todas las tablas de tu base de datos actual.</li>
+  <li>En la parte superior de la pantalla, selecciona la pestaña "Importar".</li>
+  <li>Haz clic en el botón "Examinar" y selecciona el archivo de respaldo desde tu disco duro.</li>
+  <li>Verifica el tamaño máximo permitido para archivos (por ejemplo: Máx: 16MB).</li>
+  <li>Haz clic en el botón "Continuar" y espera pacientemente a que el proceso de importación termine. Esto puede tardar varios minutos.</li>
+</ol>
+
+<h3>Acciones disponibles en la lista de respaldos</h3>
+<p>La tabla debajo de los avisos lista todos los respaldos que ya se han realizado, indicando la fecha de creación, edad, nombre del archivo y tamaño.</p>
+
+<ul>
+  <li><strong>Ver:</strong> Te permite descargar este respaldo.</li>
+  <li><strong>Eliminar:</strong> Te permite eliminar este respaldo. Ten cuidado, no hay vuelta atrás.</li>
+</ul>
+
+<p>Después de cada proceso de respaldo, debes descargar el archivo de respaldo generado haciendo clic en su ícono "Ver", o simplemente usando el enlace en el cuadro de notificación en la parte superior. Pon tu archivo de respaldo en un lugar seguro, ya que podrías necesitarlo en cualquier momento. Además, puedes encontrar estos respaldos directamente en tu servidor, en la carpeta /backup, bajo la carpeta de administración personalizada /admin.</p>
+
+<p>Tu base de datos se guarda utilizando el formato estándar SQL y su extensión de archivo .sql, y se comprime utilizando el algoritmo BZip2 (una variante del popular formato Zip. Lee más: <a href="http://en.wikipedia.org/wiki/Bzip2" target="_blank">Bzip2 en Wikipedia</a>) con la extensión de archivo .bz2. Esto da como resultado un archivo comprimido con la extensión .sql.bz2.</p>
+
+<h3>Opciones de Respaldo</h3>
+<p>En la parte inferior de la pantalla, hay dos opciones disponibles:</p>
+
+<ul>
+  <li><strong>Ignorar tablas de estadísticas:</strong> PrestaShop almacena las estadísticas de tu sitio en un puñado de tablas de base de datos, que pueden crecer rápidamente. Aunque puede ser útil guardar tus estadísticas en un lugar seguro, también hacen que los archivos de respaldo sean muy grandes para descargar, mientras que probablemente estés más interesado en hacer un respaldo de tus productos, categorías, clientes, pedidos, etc. De forma predeterminada, PrestaShop respalda todas las tablas, pero si tienes poco espacio en disco en tu servidor web, cambia esta opción a "Sí".</li>
+  <li><strong>Eliminar tablas existentes durante la importación:</strong> Al importar un archivo de respaldo, el sistema puede sobrescribir las tablas existentes con el contenido de las respaldadas, o eliminar todas las tablas existentes para reemplazarlas con el contenido del respaldo. El primer caso puede resultar en duplicados, por lo que esta opción está habilitada por defecto.</li>
+</ul>
+
+<h2>Registros (Logs)</h2>
+<p>Los errores ocurren. La mayoría de las veces, no te das cuenta de ellos porque PrestaShop los maneja silenciosamente. Sin embargo, es posible que desees conocerlos, para poder corregir los más comunes y garantizar una mejor estabilidad para tu tienda.</p>
+
+<p>La página "Registros" es donde puedes ver todas las acciones realizadas en tu tienda, y así encontrar los errores PHP que podrían afectar tu tienda. Estos se muestran en una tabla central en la página y se presentan en 4 niveles:</p>
+
+<ul>
+  <li><strong>1:</strong> Solo informativo. Avisos en tiempo de ejecución. Indican que el script encontró algo que podría señalar un error, pero que también podría ocurrir en el curso normal de la ejecución de un script.</li>
+  <li><strong>2:</strong> Advertencia. Advertencias en tiempo de ejecución (errores no fatales). La ejecución del script no se detiene.</li>
+  <li><strong>3:</strong> Error.</li>
+  <li><strong>4:</strong> Problema mayor (¡fallo!). Errores fatales en tiempo de ejecución. Estos indican errores que no se pueden recuperar, como un problema de asignación de memoria. La ejecución del script se detiene.</li>
+</ul>
+
+<p>Estas explicaciones son las oficiales del manual de PHP. Lee más: <a href="http://www.php.net/manual/en/errorfunc.constants.php" target="_blank">PHP Manual</a>.</p>
+
+<h3>Registros por correo electrónico</h3>
+<p>Los niveles de error también sirven como valores para la función "Registros por correo electrónico".</p>
+<p>PrestaShop agrega un último valor, el 5, que indica que el administrador no desea recibir ninguna notificación, ni de errores menores ni mayores.</p>
+
+<p>La herramienta de registro de errores te permite recibir una notificación por correo electrónico cuando ocurre un error. Las notificaciones se envían a la dirección de correo electrónico del propietario de la tienda, y puedes configurar el grado de importancia en el que deseas comenzar a recibir estos correos electrónicos:</p>
+
+<ul>
+  <li><strong>"1":</strong> Si deseas conocer todo, incluso la información más mínima.</li>
+  <li><strong>"3":</strong> Si solo deseas saber sobre problemas (errores y problemas mayores).</li>
+  <li><strong>"4":</strong> Si solo deseas mantener los problemas mayores.</li>
+  <li><strong>"5":</strong> Es el valor predeterminado, lo que significa que no se envía ninguna notificación.</li>
+</ul>
+
+
+<h2>Webservice</h2>
+<p>En esta página, puedes habilitar el webservice de tu tienda, de modo que herramientas de terceros puedan acceder a tus datos. Esto hace posible que herramientas interesantes ayuden a ti o a tus clientes a aprovechar mejor tu tienda (como aplicaciones móviles).</p>
+
+<p>Un webservice es un método de comunicación entre dos dispositivos electrónicos a través de una red. Se basa en un conjunto conocido de métodos, formatos y derechos de acceso, de modo que se pueda utilizar el contenido del webservice en cualquier otra herramienta autorizada y construir sobre el contenido original. Lee más sobre ello en Wikipedia: <a href="http://en.wikipedia.org/wiki/Web_service" target="_blank">Web Service en Wikipedia</a>.</p>
+
+<p>La página comienza listando las claves de webservice actualmente existentes en una tabla, si es que existen. Una clave de webservice es un acceso único que se le concede a un desarrollador, el cual puede ser utilizado para vincular una herramienta a tu tienda. Compártelas con precaución, ya que no siempre querrás que todos accedan a tus datos.</p>
+
+<p>No cualquier aplicación puede acceder a tu tienda a través del webservice de PrestaShop: tú decides cuáles pueden hacerlo y qué se les permite hacer. Cada aplicación tiene una clave de conexión única, con derechos de acceso específicos.</p>
+
+<h3>Agregar una nueva clave</h3>
+<p>El botón "Agregar nueva clave de webservice" te lleva al formulario de creación de claves de webservice:</p>
+
+<ul>
+  <li><strong>Clave:</strong> Una clave única. Puedes crear la tuya propia o elegir usar una generada, por ejemplo, haciendo clic en el botón "¡Generar!" o usando cualquier generador de claves en línea. Las claves generadas suelen ser más seguras porque son más difíciles de adivinar.</li>
+  <li><strong>Descripción de la clave:</strong> Un recordatorio de quién es esa clave y qué acceso otorga.</li>
+  <li><strong>Estado:</strong> Puedes deshabilitar una clave en cualquier momento. Esto te permite otorgar acceso temporalmente a tus datos a través de una clave específica.</li>
+  <li><strong>Permisos:</strong> No tienes que compartir TODOS tus datos con cada clave. Puedes elegir entre una amplia gama de permisos, ya sea por sección o por tipo de acceso. Tal vez quieras que algunas aplicaciones solo puedan ver ciertos elementos, mientras que otras (por ejemplo, las que uses para gestionar la tienda de forma remota) puedan editar y eliminar casi todo. Elige sabiamente.</li>
+</ul>
+
+<p>Haz clic en "Guardar" cuando tu clave esté lista.</p>
+
+<h3>Configuración</h3>
+<p>Por razones de seguridad, asegúrate de que el servidor de tu tienda sea compatible con conexiones seguras SSL.</p>
+
+<p>La configuración del webservice es bastante sencilla:</p>
+
+<ul>
+  <li><strong>Habilitar el webservice de PrestaShop:</strong> Si no deseas que nadie acceda a tu tienda a través de herramientas y aplicaciones de terceros, simplemente manténlo deshabilitado.</li>
+  <li><strong>Habilitar el modo CGI para PHP:</strong> El modo CGI es una configuración especial para el servidor Apache, donde le dices que use PHP como un script CGI en lugar de un módulo de Apache. Aunque el modo CGI tiene la reputación de ser más seguro, se ha descubierto una vulnerabilidad de seguridad tan reciente como en mayo de 2012. Consulta con tu proveedor de hosting para recibir orientación.</li>
+</ul>
+
+<h3>Habilitar el webservice de PrestaShop</h3>
+<p>Cuando habilitas el webservice de PrestaShop, el estado y la URL del webservice de tu tienda se muestran en la parte superior de la página en <strong>Parámetros avanzados > Webservice > Estado del Webservice</strong>. Esta característica ayuda a solucionar problemas comunes.</p>
+
+<h3>Realizar actualizaciones parciales</h3>
+<p>Puedes realizar actualizaciones parciales en los endpoints del webservice utilizando el método PATCH. Esto significa que las integraciones pueden actualizar una parte de un recurso, en lugar de actualizar todos los campos a la vez.</p>
+
+<h2>Multitienda</h2>
+<p>Esta página solo está disponible cuando habilitas la función multitienda.</p>
+
+<p>Convertir tu instalación de PrestaShop de una tienda única a una multitienda es muy sencillo:</p>
+
+<ol>
+  <li>Ve al menú "Parámetros de la tienda" y selecciona la página "General".</li>
+  <li>Busca la opción "Habilitar multitienda", selecciona "Sí".</li>
+  <li>Guarda los cambios.</li>
+</ol>
+
+<p>El menú "Parámetros avanzados" ahora incluirá la página "Multitienda", que se presenta en detalle en el capítulo "<a href="#">Gestionando múltiples tiendas</a>" de esta guía.</p>
+
+<h2>Características Experimentales</h2>
+<p>Habilitar una característica experimental te permite probar una nueva función en desarrollo antes de su lanzamiento oficial.</p>
+
+<p>Las características experimentales (también conocidas como "banderas de características") están dirigidas a usuarios experimentados y aventureros, que desean probar una función que aún no es lo suficientemente estable para su uso general. Aunque puede sonar emocionante, debes ser consciente de los riesgos de tales experimentos:</p>
+
+<ul>
+  <li>Las características experimentales todavía están en desarrollo. Habilitarlas podría tener consecuencias imprevistas y causar la pérdida de datos.</li>
+  <li>En cualquier caso, nunca experimentes en un entorno de producción.</li>
+</ul>
+
+<h3>Habilitar la página experimental de productos</h3>
+<p>La página experimental de productos está disponible en PrestaShop 1.7.8. Esta página mejora el rendimiento e incluye nuevas características como un nuevo sistema de gestión de combinaciones. Está en progreso y algunas funciones aún no están disponibles.</p>
+
+<p>Para hacer visible la página experimental de productos en tu back office, habilita la característica en "Parámetros avanzados" > "Características experimentales" y guarda.</p>
+
+<p>Luego, ve a "Catálogo" > "Productos". Deberías notar algunos cambios, específicamente un nuevo botón: "Nuevo producto en página experimental". Haz clic en él para abrir la página experimental de productos.</p>
+
+<p>También puedes editar un producto existente en la página experimental, seleccionando esta opción en el menú desplegable en la columna de Acciones del listado de productos.</p>
+
+<h3>Nuevas características experimentales (PrestaShop 8.1)</h3>
+<p>PrestaShop 8.1 presenta una nueva página de productos reestructurada.</p>
+
+<p>Para usar esta nueva página de productos, debes habilitarla en la página de "Noticias y características experimentales" de PrestaShop 8.1.</p>
+
+<h2>Seguridad</h2>
+
+<h3>Protección de tokens en el back office</h3>
+<p>La protección de tokens ayuda a asegurar el acceso a tu back office utilizando tokens.</p>
+
+<h3>Configurar la política de contraseñas y el indicador de fuerza de la contraseña</h3>
+<p>El menú de política de contraseñas te permite configurar la política de contraseñas de tu tienda, eligiendo entre 5 niveles crecientes de complejidad. Esto te permitirá decidir qué tan estricta quieres ser con las contraseñas de los usuarios.</p>
+
+<p>Las contraseñas se califican de 0 (Extremadamente adivinables) a 4 (Muy difíciles de adivinar) según su puntaje de seguridad. La longitud mínima y máxima de las contraseñas puede ser configurada manualmente.</p>
+
+<p>Al crear una cuenta, los usuarios del front office reciben indicaciones en tiempo real sobre la fortaleza de la contraseña elegida, de acuerdo con la política de contraseñas del back office. Una indicación codificada por colores, así como un tooltip, les ayudará a entender si su contraseña es lo suficientemente fuerte.</p>
+
+<p><strong>Nota:</strong> Los temas deben ser actualizados para soportar esta función. Ver: Tu tema actual.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Color de la Indicación</th>
+      <th>Longitud de la Contraseña</th>
+      <th>Fuerza de la Contraseña</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>🟥</td>
+      <td>No es lo suficientemente larga</td>
+      <td>No es lo suficientemente fuerte</td>
+    </tr>
+    <tr>
+      <td>🟧</td>
+      <td>No es lo suficientemente larga</td>
+      <td>Fuerte</td>
+    </tr>
+    <tr>
+      <td>🟩</td>
+      <td>Buena</td>
+      <td>Fuerte</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Un ejemplo de una contraseña débil (🟥,🟧) <br> Un ejemplo de una contraseña fuerte (🟩)</p>
+
+<h3>Gestionar las sesiones de empleados y clientes</h3>
+<p>Estas pestañas te permiten gestionar las sesiones de empleados y clientes. Para eliminar una sesión y desconectar al usuario, haz clic en el botón de eliminar en la columna de Acciones.</p>
+
+<p>Para acceder al back office, el empleado o cliente deberá iniciar sesión nuevamente usando su correo electrónico y contraseña.</p>
+
+<h4>Pestaña de Sesiones de Empleados</h4>
+<p>La pestaña de sesiones de empleados te permite gestionar las sesiones de los empleados.</p>
+
+<h4>Pestaña de Sesiones de Clientes</h4>
+<p>La pestaña de sesiones de clientes te permite gestionar las sesiones de los clientes.</p>
+
+<h3>Eliminar sesiones obsoletas</h3>
+<p>El botón "Eliminar" te permite eliminar manualmente las sesiones obsoletas para reducir el desorden en la base de datos.</p>
