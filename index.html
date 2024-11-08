@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,36 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mi Página Web</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="container my-5">
+    <h2 class="mb-4">Configuración de Parámetros Avanzados</h2>
+    <p>Navegar por el menú de parámetros avanzados es como mirar bajo el capó: es donde ocurre todo lo técnico y encontrarás parámetros para asegurarte de que tu tienda funcione sin problemas. Revisar la información de configuración, configurar los correos electrónicos, hacer copias de seguridad de tu base de datos: estas páginas no se visitan con frecuencia (a menos que sea la parte de la base de datos), pero son de cierta importancia, especialmente para tu webmaster.</p>
 
+    <ul class="list-group mb-5">
+        <li class="list-group-item"><a href="#informacion"><strong>Información</strong></a></li>
+        <li class="list-group-item"><a href="#rendimiento"><strong>Rendimiento</strong></a></li>
+        <li class="list-group-item"><a href="#administracion"><strong>Administración</strong></a></li>
+        <li class="list-group-item"><a href="#correo"><strong>Correo electrónico</strong></a></li>
+        <li class="list-group-item"><a href="#importacion"><strong>Importación</strong></a></li>
+        <li class="list-group-item"><a href="#equipo"><strong>Equipo</strong></a></li>
+        <li class="list-group-item"><a href="#basededatos"><strong>Base de datos</strong></a></li>
+        <li class="list-group-item"><a href="#registros"><strong>Registros</strong></a></li>
+        <li class="list-group-item"><a href="#webservice"><strong>Servicio web</strong></a></li>
+        <li class="list-group-item"><a href="#multitienda"><strong>Multitienda</strong></a></li>
+        <li class="list-group-item"><a href="#caracteristicas"><strong>Características Especiales</strong></a></li>
+        <li class="list-group-item"><a href="#seguridad"><strong>Seguridad</strong></a></li>
+    </ul>
 
-<h2>Configuración de Parámetros Avanzados</h2>
-<p>Navegar por el menú de parámetros avanzados es como mirar bajo el capó: es donde ocurre todo lo técnico y encontrarás parámetros para asegurarte de que tu tienda funcione sin problemas. Revisar la información de configuración, configurar los correos electrónicos, hacer copias de seguridad de tu base de datos: estas páginas no se visitan con frecuencia (a menos que sea la parte de la base de datos), pero son de cierta importancia, especialmente para tu webmaster.</p>
+<section id="informacion" class="mb-5">
+ <h2>Información</h2>
 
-<ul>
-    <li><a href="#informacion"><strong>Información</strong></a></li>
-    <li><a href="#rendimiento"><strong>Rendimiento</strong></a></li>
-    <li><a href="#administracion"><strong>Administración</strong></a></li>
-    <li><a href="#correo"><strong>Correo electrónico</strong></a></li>
-    <li><a href="#importacion"><strong>Importación</strong></a></li>
-    <li><a href="#equipo"><strong>Equipo</strong></a></li>
-    <li><a href="#basededatos"><strong>Base de datos</strong></a></li>
-    <li><a href="#registros"><strong>Registros</strong></a></li>
-    <li><a href="#webservice"><strong>Servicio web</strong></a></li>
-    <li><a href="#multitienda"><strong>Multitienda</strong></a></li>
-    <li><a href="#caracteristicas"><strong>Características Especiales</strong></a></li>
-    <li><a href="#seguridad"><strong>Seguridad</strong></a></li>
-</ul>
-  
-<h2 id="informacion">Información</h2>
 <p>Esta página sirve como un recordatorio útil de la configuración de tu PrestaShop: versión, información del servidor, versión de PHP, versión de MySQL. Toda esta información es muy útil cuando necesitas informar un problema a los desarrolladores de PrestaShop, o simplemente a tu webmaster o proveedor de alojamiento web.</p>
 
 <p>Hay una última sección titulada "Lista de archivos modificados". Justo después de haber instalado PrestaShop por primera vez, lo único que esta sección muestra es "No se ha detectado ningún cambio en sus archivos".</p>
 <p>Pero después de instalar algunos módulos, un par de temas, hacer cambios avanzados en algunas clases de anulación o eliminar archivos por completo, esta lista mostrará la diferencia entre tu instalación actual de PrestaShop y cómo lucía en su estado original. Esto te ayuda a ver qué cambios se han realizado en su instalación... y por lo tanto, qué debes tener en cuenta si quieres actualizar tu tienda manualmente, o si estás moviendo archivos a un nuevo servidor.</p>
 
 <p>Incluso con una instalación limpia, esta sección podría indicar archivos faltantes como ".gitattributes", ".gitignore", "CONTRIBUTING.md", "CONTRIBUTORS.md" o "README.md". Estos son archivos específicos de Git, y PrestaShop no los utiliza, por lo que no debes preocuparte por ellos.</p>
+</section>
 
 <h2 id="rendimiento">Rendimiento</h2>
 <p>Esta página combina varias herramientas y consejos que podrían ayudarte a mejorar el rendimiento de tu tienda desde el punto de vista del servidor, no de las ventas. Aunque un servidor que funcione bien puede atender a más clientes y, por lo tanto, generar más ventas.</p>
@@ -761,5 +765,7 @@
 <h3>Eliminar sesiones obsoletas</h3>
 <p>El botón "Eliminar" te permite eliminar manualmente las sesiones obsoletas para reducir el desorden en la base de datos.</p>
 
+</div> <!-- Cierre del contenedor principal -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html
+</html>
