@@ -134,6 +134,10 @@
 </ul>
 <h2 id="i-informacion">ℹ️ Información</h2>
 <p>Esta página proporciona un recordatorio útil sobre la configuración de tu tienda PrestaShop, incluyendo detalles como la versión de PrestaShop, la información del servidor, la versión de PHP y la versión de MySQL. Esta información es muy valiosa cuando necesitas reportar un problema a los desarrolladores de PrestaShop o cuando estás trabajando con tu webmaster o proveedor de alojamiento.</p>
+<div style="text-align: center;">
+    <img src="img/information.png" alt="Smarty Template Language" style="width: 100%;"/>
+</div>
+
 <h3 id="lista-de-archivos-modificados">Lista de Archivos Modificados</h3>
 <p>En esta sección, tras la instalación inicial de PrestaShop, verás el mensaje "No se ha detectado ningún cambio en sus archivos". Sin embargo, después de instalar algunos módulos, agregar temas, hacer cambios avanzados en clases o eliminar archivos, esta lista mostrará las diferencias entre tu instalación actual y la original. Esto es útil para tener claridad sobre los cambios realizados en tu instalación, lo cual es importante si deseas actualizar tu tienda manualmente o mover archivos a un nuevo servidor.</p>
 <p>Incluso en una instalación limpia, es posible que se muestren archivos faltantes, como <code>.gitattributes</code>, <code>.gitignore</code>, <code>CONTRIBUTING.md</code>, <code>CONTRIBUTORS.md</code> o <code>README.md</code>. Estos son archivos específicos de Git que PrestaShop no utiliza, por lo que no debes preocuparte por ellos.</p>
@@ -141,6 +145,10 @@
 <p>Esta página reúne varias herramientas y consejos que pueden ayudarte a mejorar el rendimiento de tu tienda desde el punto de vista del servidor. Aunque un servidor rápido puede no aumentar directamente tus ventas, sin duda mejora la capacidad de atender más clientes simultáneamente, lo que puede generar más ventas a largo plazo.</p>
 <h3 id="smarty">🧑‍💻 Smarty</h3>
 <p>Smarty es el lenguaje de plantillas utilizado por los temas de PrestaShop. Puedes aprender más sobre él en <a href="http://www.smarty.net/">Smarty.net</a>.</p>
+<div style="text-align: center;">
+    <img src="img/smarty.png" alt="Smarty Template Language" style="width: 100%;"/>
+</div>
+
 <h4 id="opciones-de-cache">Opciones de Caché:</h4>
 <ul>
 <li><strong>Caché de plantilla:</strong> PrestaShop almacena en caché las páginas HTML para mejorar el rendimiento en el front-end.</li>
@@ -156,6 +164,10 @@
 <p>Por defecto, Smarty usa un sistema de caché basado en archivos. Sin embargo, puedes elegir MySQL como sistema de almacenamiento para la caché de salida de Smarty.</p>
 <h3 id="modo-de-depuracion">🛠️ Modo de Depuración</h3>
 <p>Cuando el modo de depuración está activado, puedes reducir el impacto de ciertas funciones en PrestaShop para identificar mejor el origen de errores:</p>
+<div style="text-align: center;">
+    <img src="img/depuracion.png" alt="Smarty Template Language" style="width: 100%;"/>
+</div>
+
 <ul>
 <li><strong>Desactivar módulos que no son de PrestaShop:</strong> Permite determinar si un problema proviene de un módulo propio de PrestaShop o de un módulo de terceros.</li>
 <li><strong>Desactivar todas las sobrecargas:</strong> Desactiva las sobrecargas de código para identificar el origen de los problemas.</li>
@@ -164,6 +176,10 @@
 <h3 id="caracteristicas-opcionales">⚙️ Características Opcionales</h3>
 <p>Si no usas algunas características de PrestaShop, puedes desactivarlas para mejorar el rendimiento. Sin embargo, si tu catálogo incluye productos con estas características, no podrás desactivarlas sin eliminar datos primero.</p>
 <p>Características que puedes desactivar:</p>
+<div style="text-align: center;">
+    <img src="img/caracteristicas-op.png" alt="Smarty Template Language" style="width: 100%;"/>
+</div>
+
 <ul>
 <li><strong>Combinaciones:</strong> Permiten crear variaciones de un producto (tamaño, color, etc.).</li>
 <li><strong>Características:</strong> Detalles específicos del producto, como peso, material, etc.</li>
@@ -171,6 +187,10 @@
 </ul>
 <h3 id="combinar-comprimir-y-almacenar-en-cache-ccc">🔧 Combinar, Comprimir y Almacenar en Caché (CCC)</h3>
 <p>Las herramientas CCC ayudan a reducir la carga del servidor y optimizar el tiempo de carga del tema:</p>
+<div style="text-align: center;">
+    <img src="img/ccc.png" alt="Smarty Template Language" style="width: 100%;"/>
+</div>
+
 <ul>
 <li><strong>Caché inteligente para CSS:</strong> Los archivos CSS pueden combinarse y comprimirse para mejorar la carga.</li>
 <li><strong>Caché inteligente para JavaScript:</strong> Los archivos JavaScript también pueden combinarse, pero asegúrate de probar todo antes de activarlo.</li>
@@ -178,6 +198,10 @@
 </ul>
 <h3 id="servidores-de-medios">📦 Servidores de Medios</h3>
 <p>Puedes redirigir parte del tráfico (como imágenes y videos) a otros servidores, por ejemplo, a través de una CDN (Red de Entrega de Contenido). Aquí se explica cómo hacerlo:</p>
+<div style="text-align: center;">
+    <img src="img/servidores-medios.png" alt="Smarty Template Language" style="width: 100%;"/>
+</div>
+
 <ol>
 <li>Regístrate en un host especializado en CDN (Akamai, Amazon AWS CloudFront, CloudFlare, entre otros).</li>
 <li>Copia tus archivos de medios al servidor de ese host.</li>
@@ -187,6 +211,10 @@
 <h3 id="cache">💾 Caché</h3>
 <p>La caché almacena versiones estáticas de tu sitio para reducir la carga del servidor y mejorar el tiempo de carga.</p>
 <p>Tipos de caché disponibles:</p>
+<div style="text-align: center;">
+    <img src="img/cache.png" alt="Smarty Template Language" style="width: 100%;"/>
+</div>
+
 <ul>
 <li><strong>Memcached:</strong> Sistema de caché distribuido, ideal para múltiples servidores.</li>
 <li><strong>APC:</strong> Alternative PHP Cache, útil para un solo servidor.</li>
@@ -220,8 +248,16 @@
 </ul>
 <h2 id="correo-electronico">📧 Correo electrónico</h2>
 <p>Tu tienda envía muchos mensajes a lo largo de los pasos de registro y realización de pedidos. Aquí podrás configurar cómo se enviarán esos mensajes y consultar los mensajes enviados.</p>
+<div style="text-align: center;">
+    <img src="img/email.png" alt="Smarty Template Language" style="width: 100%;"/>
+</div>
+
 <h3 id="correo-electronico-enviados"><strong>✉️ Correo electrónico enviados</strong></h3>
 <p>En esta sección, verás un listado de todos los correos electrónicos enviados desde tu tienda, incluyendo el destinatario, la plantilla utilizada, el idioma del mensaje, el asunto del correo y la hora de envío.</p>
+<div style="text-align: center;">
+    <img src="img/email2.png" alt="Smarty Template Language" style="width: 100%;"/>
+</div>
+
 <h3 id="configuracion-del-correo-electronico"><strong>🔧 Configuración del correo electrónico</strong></h3>
 <p>Aquí podrás decidir cómo se envían y reciben los correos electrónicos. El formulario tiene tres secciones principales:</p>
 <ul>
@@ -244,6 +280,10 @@
 <li>Tu ISP (Proveedor de servicios de Internet),</li>
 <li>Tu proveedor de correo electrónico.</li>
 </ul>
+<div style="text-align: center;">
+    <img src="img/stmp.png" alt="Smarty Template Language" style="width: 100%;"/>
+</div>
+
 <p>Por ejemplo, si usas Gmail, la configuración podría ser la siguiente:</p>
 <ul>
 <li><strong>Servidor SMTP:</strong> smtp.gmail.com</li>
@@ -261,13 +301,25 @@
 <p>Puedes elegir entre usar solo uno de los dos formatos o ambos, siendo recomendable usar ambos para garantizar la mayor compatibilidad.</p>
 <h3 id="usar-firmas-dkim-para-los-correos-electronicos"><strong>🛡️ Usar firmas DKIM para los correos electrónicos</strong></h3>
 <p>Las firmas DKIM son firmas digitales invisibles que se insertan en los encabezados de los correos electrónicos, permitiendo verificar su autenticidad y evitando el phishing. Esto también reduce la posibilidad de que tus correos sean marcados como spam.</p>
+<div style="text-align: center;">
+    <img src="img/dkim.avif" alt="Smarty Template Language" style="width: 100%;"/>
+</div>
+
 <p>Puedes habilitar la firma DKIM desde <strong>Parámetros Avanzados &gt; Correo electrónico</strong>. Al activarla, aparecerá un formulario con los campos para el dominio DKIM, selector DKIM y clave privada DKIM. Completa estos campos y guarda la configuración.</p>
+<div style="text-align: center;">
+    <img src="img/dkim2.avif" alt="Smarty Template Language" style="width: 100%;"/>
+</div>
+
 <h3 id="prueba-tu-configuracion-de-correo-electronico"><strong>📨 Prueba tu configuración de correo electrónico</strong></h3>
 <p>Una vez que hayas configurado los correos electrónicos, ingresa tu propia dirección de correo electrónico en esta sección y haz clic en "Enviar un correo de prueba". Luego, revisa tu bandeja de entrada para verificar que el correo se haya recibido correctamente, en el formato seleccionado. Si no lo recibes, revisa y ajusta la configuración según sea necesario.</p>
 <h2 id="importacion">🛠 Importación</h2>
 <p>La página de importación facilita la carga masiva de productos en tu catálogo o el traspaso de datos desde otra plataforma de comercio electrónico. Es útil tanto para grandes catálogos como para transferencias de datos previamente exportados.</p>
 <p>Históricamente, las importaciones en PrestaShop se realizaban con archivos .CSV. A partir de la versión 1.7, también se aceptan otros formatos como .xls, .xlsx, .xlst, .ods y .ots.</p>
 <p>CSV, "Comma-separated values" (valores separados por comas), es un formato de texto plano muy utilizado para el almacenamiento, importación y exportación de datos de manera accesible y no propietaria. Muchas herramientas de gestión de datos admiten CSV en diversas versiones. Puedes conocer más sobre el formato CSV en <a href="https://es.wikipedia.org/wiki/Valores_separados_por_comas">Wikipedia</a>.</p>
+<div style="text-align: center;">
+    <img src="img/importacion.png" alt="Smarty Template Language" style="width: 100%;"/>
+</div>
+
 <h3 id="el-proceso-de-importacion">🔄 El proceso de importación</h3>
 <p>La importación requiere cierta preparación y comienza con un formulario que contiene las configuraciones principales:</p>
 <ul>
@@ -288,6 +340,10 @@
 </ul>
 <p>Cada vez que cambies la entidad a importar, "Campos disponibles" mostrará los campos de datos necesarios para esa entidad. Aunque la herramienta de importación ayuda a mapear tus campos, organizar los datos en el orden y formato requeridos facilitará el proceso de importación.</p>
 <p>Algunos campos tienen un icono de información ("i") que puedes consultar para obtener detalles útiles, especialmente para las configuraciones multitienda o de gestión avanzada de stock.</p>
+<div style="text-align: center;">
+    <img src="img/campos.png" alt="Smarty Template Language" style="width: 100%; max-width: 600px;"/>
+</div>
+
 <h3 id="formato-de-los-datos">📄 Formato de los datos</h3>
 <p>El archivo debe ser de texto y con extensión .csv. Se recomienda utilizar un punto y coma (";") como delimitador de campos. Si los textos de tu archivo (como las descripciones) contienen punto y coma, elimínalos o selecciona otro delimitador en "Separador de campos".</p>
 <p>Se pueden crear archivos CSV con cualquier editor de texto, aunque usar una hoja de cálculo facilita el trabajo visual y de organización. Opciones populares incluyen Microsoft Excel (comercial) y OpenOffice.org Calc (gratuito).</p>
@@ -310,6 +366,10 @@
 <p>Selecciona el archivo y define el tipo de datos en "¿Qué deseas importar?". A continuación, ajusta el idioma, los delimitadores y selecciona si deseas borrar los productos antes de importar. Presiona "Siguiente paso" para continuar.</p>
 <h3 id="herramienta-de-mapeo-de-datos">🗺 Herramienta de mapeo de datos</h3>
 <p>Al hacer clic en "Siguiente paso", la página muestra la herramienta de mapeo para ajustar tus columnas al formato de PrestaShop. Asegúrate de alinear correctamente las columnas usando los selectores de encabezados para que los datos se importen sin errores.</p>
+<div style="text-align: center;">
+    <img src="img/mapeo.webp" alt="Smarty Template Language" style="width: 100%;"/>
+</div>
+
 <p>Si usaste la primera fila para nombres de columnas, ingresa "1" en "Filas a omitir" para evitar que se importen. Al finalizar el mapeo, haz clic en "Importar" para iniciar la importación y ver el progreso.</p>
 <h3 id="configuraciones-de-mapeo">🔧 Configuraciones de Mapeo</h3>
 <p>El mapeo puede guardarse y reutilizarse en futuras importaciones. En la parte superior de la herramienta, podrás:</p>
@@ -341,6 +401,10 @@
 <p>Para gestionar adecuadamente, crea una cuenta de empleado única para cada persona que colabore en tu tienda. Evita cuentas de uso compartido, ya que esto impide identificar quién hizo qué. Cada empleado debe tener su cuenta personal para garantizar una gestión responsable de tu tienda.</p>
 <h4 id="agregar-un-nuevo-empleado">➕ Agregar un nuevo empleado</h4>
 <p>Haz clic en "Agregar nuevo empleado" para abrir el formulario de creación de cuenta. Los campos del formulario incluyen:</p>
+<div style="text-align: center;">
+    <img src="img/empleado.webp" alt="Smarty Template Language" style="width: 100%;"/>
+</div>
+
 <ul>
 <li><strong>Nombre y Apellido</strong>: Estos datos no son visibles para los clientes, pero te ayudarán a identificar quién realiza cambios.</li>
 <li><strong>Correo electrónico</strong>: Dirección que también sirve como identificador de inicio de sesión. Si está habilitado, este correo recibirá notificaciones de clientes y de PrestaShop.</li>
@@ -360,6 +424,10 @@
 </ul>
 <h3 id="perfiles">🔑 Perfiles</h3>
 <p>PrestaShop permite asignar derechos y permisos específicos a cada perfil de empleado para controlar el acceso. Por ejemplo, un administrador tiene acceso completo, mientras que un empleado puede tener acceso solo a la gestión de pedidos.</p>
+<div style="text-align: center;">
+    <img src="img/perfiles.png" alt="Smarty Template Language" style="width: 100%;"/>
+</div>
+
 <h4 id="perfiles-predeterminados">Perfiles predeterminados</h4>
 <p>PrestaShop ofrece 4 perfiles predefinidos:</p>
 <ul>
@@ -380,6 +448,10 @@
 </ol>
 <h3 id="permisos">🔒 Permisos</h3>
 <p>Los permisos son la clave para gestionar el acceso en tu tienda. Cada perfil tiene un conjunto de permisos que puedes ajustar en la página de administración "Permisos".</p>
+<div style="text-align: center;">
+    <img src="img/permisos.png" alt="Smarty Template Language" style="width: 100%;"/>
+</div>
+
 <h4 id="configuracion-de-permisos">Configuración de Permisos</h4>
 <p>La página "Permisos" está organizada en pestañas:</p>
 <ul>
@@ -437,6 +509,10 @@
 <li><strong>Consulta SQL:</strong> Introduce la consulta SQL que deseas ejecutar. Puedes incluir comandos complejos como JOINs.</li>
 </ul>
 <p>La sección "Lista de tablas MySQL" te permitirá explorar fácilmente las tablas disponibles en la base de datos. Selecciona una tabla y PrestaShop te mostrará sus atributos, que puedes agregar a tu consulta con el botón "Añadir atributo a la consulta SQL".</p>
+<div style="text-align: center;">
+    <img src="img/sqlmanager.png" alt="Smarty Template Language" style="width: 100%;"/>
+</div>
+
 <p>Una vez guardada la consulta, regresarás a la página principal con la lista de consultas guardadas.</p>
 <h4 id="ejecutar-una-consulta">▶️ Ejecutar una consulta</h4>
 <p>Cada consulta guardada se presenta en una tabla con cuatro íconos a la derecha:</p>
@@ -500,8 +576,16 @@
 <li><strong>Ignorar tablas de estadísticas:</strong> PrestaShop almacena estadísticas en algunas tablas que pueden hacer que el archivo de respaldo sea muy grande. Si tienes poco espacio en disco, puedes desmarcar esta opción para excluirlas.</li>
 <li><strong>Eliminar tablas existentes durante la importación:</strong> Si se habilita, esta opción eliminará todas las tablas antes de importar los datos del respaldo, lo que puede evitar duplicados. Está habilitada por defecto.</li>
 </ul>
+<div style="text-align: center;">
+    <img src="img/backup.avif" alt="Smarty Template Language" style="width: 100%; max-width: 600px;"/>
+</div>
+
 <h2 id="registros-logs">📜 Registros (logs)</h2>
 <p>Los errores pueden ocurrir en cualquier momento. A menudo, PrestaShop los maneja sin que te des cuenta, pero puede ser útil revisarlos para corregir problemas comunes y mejorar la estabilidad de tu tienda.</p>
+<div style="text-align: center;">
+    <img src="img/logs.png" alt="Smarty Template Language" style="width: 100%;"/>
+</div>
+
 <p>La página <strong>Registros</strong> muestra todas las acciones realizadas en tu tienda, permitiéndote ver los errores PHP que podrían afectarla. Estos errores se presentan en una tabla central con cuatro niveles de gravedad:</p>
 <ul>
 <li><strong>1:</strong> Solo informativo. Son avisos durante la ejecución del código que indican algo que podría señalar un problema, pero también podría ser parte del funcionamiento normal del script.</li>
@@ -533,6 +617,10 @@
 <li><strong>Permisos:</strong> No es necesario compartir todos tus datos con cada clave. Puedes elegir entre una variedad de permisos, ya sea por sección o por tipo de acceso. Tal vez quieras que algunas aplicaciones solo puedan ver ciertos elementos, mientras que otras (como las que gestionan la tienda remotamente) puedan editar y eliminar casi todo. Elige con cuidado.</li>
 </ul>
 <p>Haz clic en <strong>"Guardar"</strong> cuando tu clave esté lista.</p>
+<div style="text-align: center;">
+    <img src="img/clave.png" alt="Smarty Template Language" style="width: 100%;"/>
+</div>
+
 <h3 id="configuracion">⚙️ Configuración</h3>
 <p>Por razones de seguridad, asegúrate de que el servidor de tu tienda sea compatible con conexiones seguras SSL.</p>
 <p>La configuración del servicio web es sencilla:</p>
@@ -542,6 +630,10 @@
 </ul>
 <h3 id="habilitar-el-servicio-web-de-prestashop">🌍 Habilitar el servicio web de PrestaShop</h3>
 <p>Al habilitar el servicio web de PrestaShop, el estado y la URL del servicio web de tu tienda se mostrarán en la parte superior de la página en <strong>Parámetros avanzados &gt; servicio web &gt; Estado del servicio web</strong>. Esta información es útil para solucionar problemas comunes.</p>
+<div style="text-align: center;">
+    <img src="img/webservice.webp" alt="Smarty Template Language" style="width: 100%;"/>
+</div>
+
 <h3 id="realizar-actualizaciones-parciales">🔄 Realizar actualizaciones parciales</h3>
 <p>Puedes realizar actualizaciones parciales en los endpoints del servicio web utilizando el método <strong>PATCH</strong>. Esto permite que las integraciones actualicen solo una parte de un recurso, en lugar de actualizar todos los campos a la vez.</p>
 <h2 id="multitienda">🛍️ Multitienda</h2>
@@ -603,6 +695,11 @@
 </tr>
 </tbody>
 </table>
+<div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 10px;">
+    <img src="img/seguridad1.png" alt="Seguridad 1" style="width: 45%;" />
+    <img src="img/seguridad2.png" alt="Seguridad 2" style="width: 45%;" />
+</div>
+
 <p><strong>Ejemplos:</strong></p>
 <ul>
 <li>Un ejemplo de una contraseña <strong>débil</strong> (🟥,🟧)</li>
@@ -698,5 +795,5 @@
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2024-11-12 10:33:05.219835+00:00
+Build Date UTC : 2024-11-15 18:50:10.172603+00:00
 -->
